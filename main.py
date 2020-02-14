@@ -20,12 +20,9 @@ def get_rack_status(req,resp):
     for pin in racks:
         status['status_rack_{}'.format(i)]=pin.value()
         i+=1
-    if not any(status.values()):
-        yield from picoweb.start_response(resp,status='500')
-        yield from resp.awrite("No rack sensor connected")
-    else:        
-        yield from picoweb.start_response(resp,content_type='application/json')
-        yield from resp.awrite(ujson.dumps(status)) 
+         
+    yield from picoweb.start_response(resp,content_type='application/json')
+    yield from resp.awrite(ujson.dumps(status)) 
 
 ulogging.basicConfig(level=ulogging.INFO)
 

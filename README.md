@@ -20,3 +20,5 @@
 <p>Per sbloccare la serratura effettuare una chiamata POST all'indirizzo <code>ipCliente:8081/tennisify/api/v1.0/lock</code></p>
 <p>Per leggere lo stato delle racchette effettuare una chiamata POST all'indirizzo <code>ipCliente:8081/tennisify/api/v1.0/rack</code>. Verrà restituito come risposta un oggetto json contenente lo stato delle racchette (0 = Presente, 1 = Assente)</p>
 <p> Esempio: <code>{"status_rack_2": 0, "status_rack_3": 0, "status_rack_4": 0, "status_rack_1": 1}</code></p>
+<h2>Schema Elettrico</h2>
+<a href="https://ibb.co/S0dNYLT"><img src="https://i.ibb.co/vmQ1yt5/Schema-elettrico.png" alt="Schema-elettrico" border="0"></a><br />

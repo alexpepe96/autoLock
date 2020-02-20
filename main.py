@@ -13,7 +13,7 @@ def post_lock_status(req,resp):
     yield from picoweb.start_response(resp,content_type='application/json')
     yield from resp.awrite(ujson.dumps("success"))
 
-@app.route('/tennisify/api/v1.0/rack', methods=['POST'])
+@app.route('/tennisify/api/v1.0/rack', methods=['GET'])
 def get_rack_status(req,resp):
     status={}
     i=1
